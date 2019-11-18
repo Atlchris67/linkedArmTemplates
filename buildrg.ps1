@@ -4,7 +4,7 @@ $ResourceGroupName = $EnvName + '-rg'
 $Location = 'eastus'
 $Environment = 'dev'
 
-$TemplateFile = 'C:\devroot\improving\arm-templates\helloworldparent.json'
+$TemplateFile = 'https://raw.githubusercontent.com/Atlchris67/linkedArmTemplates/master/helloworldparent.json'
 #$TemplateParameterFile = 'C:\devroot\improving\cu-direct\rg-as-parts\keyvault\parameters.json'
 
 
@@ -30,7 +30,7 @@ catch{
 
     $TemplateParams = @{
         ResourceGroupName = $ResourceGroupName  
-        TemplateFile = $TemplateFile
+        TemplateUri = $TemplateFile
         #TemplateFile = $_.Directory.FullName + "\" + $_.Name.Substring( 0,$_.Name.IndexOf('.') ) + ".json"
         #TemplateParameterFile = $_.FullName
     }

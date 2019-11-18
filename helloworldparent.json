@@ -21,6 +21,10 @@
         "messageFromLinkedTemplate": {
             "type": "string",
             "value": "[reference('linkedTemplate').outputs.greetingMessage.value]"
+        },
+        "baseURI": {
+            "type": "string",
+            "value": "[uri(deployment().properties.templateLink.uri, 'helloworld.json')]"
         }
     }
 }
